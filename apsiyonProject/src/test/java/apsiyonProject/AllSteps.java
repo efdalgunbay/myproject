@@ -4,13 +4,9 @@ import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 import java.util.List;
-import java.util.Set;
 
-import org.apache.commons.logging.Log;
-import org.apache.http.entity.mime.Header;
 import org.junit.After;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Cookie;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,7 +14,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.html5.LocalStorage;
 import org.openqa.selenium.html5.WebStorage;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -79,22 +74,47 @@ public class AllSteps {
 		PageObject.searchbar("samsung");
 		sleep(3000);
 
-		//Make a list all products and check contains samsung each element
-		List<WebElement> allElements = driver.findElements(By.className("productName"));
+		//Make a list all products and check contains samsung first page element
+		List<WebElement> Elementsfirst = driver.findElements(By.className("productName"));
 
-		for (WebElement elements : allElements) {
+		for (WebElement elements : Elementsfirst) {
 			assertTrue(elements.getText().contains("Samsung"));
 		}
+		
+		//Scroll buttom of the page
+		JavascriptExecutor js = ((JavascriptExecutor) driver);
+		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+		
+		//Click Page 2
+		PageObject.clickpagetwo();
+		sleep(5000);
+		
+		//Check the right page for 2. page
+		String secondpageurl = driver.getCurrentUrl();
+		String expectedsecondpageurl = "https://www.n11.com/arama?q=samsung&pg=2";
+		Assert.assertEquals(secondpageurl, expectedsecondpageurl);
+		
+		
+		//Make a list all products and check contains samsung second page element
+		List<WebElement> Elementssecond = driver.findElements(By.className("productName"));
+
+		for (WebElement elements : Elementssecond) {
+			assertTrue(elements.getText().contains("Samsung"));
+		}
+		
+		// Go back to first page
+		driver.navigate().back();
+		sleep(5000);
 
 		//Scroll webpage until find 3. products on list
-		WebElement element = driver.findElement(By.xpath("//div[@id='view']/ul/li[3]/div//span[@title='Favorilere ekle']"));
+		WebElement trhidfavorite = driver.findElement(By.xpath("//div[@id='view']/ul/li[3]/div//span[@title='Favorilere ekle']"));
 		Actions actions = new Actions(driver);
-		actions.moveToElement(element);
+		actions.moveToElement(trhidfavorite);
 		actions.perform();
 
 		//click favorite button
 		PageObject.addfavorite();
-
+		
 		//Get dataposition that clicked element
 		String dataposition = driver.findElement(By.xpath("//div[@id='view']/ul/li[3]/div"))
 		.getAttribute("data-position");
@@ -122,7 +142,6 @@ public class AllSteps {
 
 		
 		//Scroll top of the page
-		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,0)");
 		
 		//Mouse over the loginmenu element
@@ -173,6 +192,7 @@ public class AllSteps {
 
 	}
 
+	// Method for sleep
 	private void sleep(long m) {
 		try {
 			Thread.sleep(m);

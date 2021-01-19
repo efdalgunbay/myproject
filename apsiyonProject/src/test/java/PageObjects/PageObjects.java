@@ -1,10 +1,8 @@
 package PageObjects;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 
 public class PageObjects {
 
@@ -24,7 +22,7 @@ public class PageObjects {
 	By favoritelist = By.xpath("/html//header[@id='header']/div[@class='container']//div[@class='customMenu']/div[2]//a[@title='Favorilerim / Listelerim']");
 	By favories = By.className("listItemTitle");
 	By deletefavorite = By.className("deleteProFromFavorites");
-
+	By page2 = By.xpath("/html//div[@id='contentListing']/div[@class='container']//div[@class='pagination']/a[2]");
 	public PageObjects(WebDriver driver) {
 		this.driver = driver;
 
@@ -89,9 +87,15 @@ public class PageObjects {
 
 				driver.findElement(deletefavorite).click();
 				driver.findElement(By.xpath("/html/body/div[4]//span[@class='btn btnBlack confirm']")).click();
+			
+				
 
 			}	
-	
+	public void clickpagetwo () {
+		
+		driver.findElement(page2).click();
+
+	}
 
 		}	
 
