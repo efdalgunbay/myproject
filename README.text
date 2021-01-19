@@ -1,0 +1,243 @@
+TEST CASE 1 
+
+TEST SCENARIO Ana sayfaya giriş
+
+TEST Precondition 
+
+Başarılı bir internet bağlantısı
+
+TEST Requirements
+
+TEST STEPS 
+ 
+-	Kullanıcı browser'ı açar
+- Kullanıcı https://www.n11.com/ sayfasını açar
+
+TEST DATA      
+
+EXPECTED RESULT=Kullanıcı https://www.n11.com/ sayfasının doğru şekilde yüklendiği görür.
+
+
+TEST CASE 2 
+
+TEST SCENARIO Kvkk Metninin kapatılması
+
+TEST Precondition 
+
+Başarılı bir internet bağlantısı
+
+TEST Requirements
+
+TEST STEPS 
+ 
+-	Kullanıcı browser'ı açar
+- Kullanıcı https://www.n11.com/ sayfasını açar
+- 3 saniye bekler.
+- Kullanıcı Kvkk metninin çıktığı görür
+- Kullanıcı kvkk metnini üzerindeki "Tamam" butonuna tıklar.
+
+TEST DATA      
+
+EXPECTED RESULT= Kullanıcı kvkk metninin kapantığını görür.
+
+TEST CASE 3 
+
+TEST SCENARIO WebPush metninin kapatılması
+
+TEST Precondition 
+
+Başarılı bir internet bağlantısı
+
+TEST Requirements
+
+TEST STEPS 
+ 
+-	Kullanıcı browser'ı açar
+- Kullanıcı https://www.n11.com/ sayfasını açar
+- Kullanıcı 3 saniye bekler.
+- Kullanıcı Kvkk metninin çıktığı görür
+- Kullanıcı kvkk metnini üzerindeki "Tamam" butonuna tıklar.
+- Kullanıcı 3 saniye bekler 
+- Kullanıcı Webpush metninin açılıdğını görür
+- Kullanıcı "Daha sonra" Butonuna tıklar
+
+TEST DATA      
+
+EXPECTED RESULT= Kullanıcı WebPush ekranın kapantığını görür.
+
+TEST CASE 4 
+
+TEST SCENARIO Login olunması
+
+TEST Precondition 
+
+Başarılı bir internet bağlantısı
+Geçerli bir mail adresi.
+Geçerli bir şifre
+
+TEST Requirements
+
+TEST STEPS 
+ 
+-	Kullanıcı browser'ı açar
+- Kullanıcı https://www.n11.com/ sayfasını açar
+- Kullanıcı kvkk metnini üzerindeki "Tamam" butonuna tıklar.
+- Kullanıcı "Daha sonra" Butonuna tıklar.
+- Kullanıcı sağ üst köşede giriş yap butonuna tıklar.
+- Kullanıcı giriş yap sayfasına yönlendirilidği görülür.
+- Kullanıcı email girer
+- Kullanıcı şifre girer.
+- Kullanıcı Giriş yap butonuna tıklar.
+
+TEST DATA      
+
+EXPECTED RESULT= kullanıcı başarılı şekilde login olduğu görülür.
+
+TEST CASE 4 
+
+TEST SCENARIO Login olunması
+
+TEST Precondition 
+
+Başarılı bir internet bağlantısı
+Geçerli bir mail adresi.
+Geçerli bir şifre
+
+TEST Requirements
+
+TEST STEPS 
+ 
+-	Kullanıcı browser'ı açar
+- Kullanıcı https://www.n11.com/ sayfasını açar
+- Kullanıcı kvkk metnini üzerindeki "Tamam" butonuna tıklar.
+- Kullanıcı "Daha sonra" Butonuna tıklar.
+- Kullanıcı sağ üst köşede giriş yap butonuna tıklar.
+- Kullanıcı giriş yap sayfasına yönlendirilidği görülür.
+- Kullanıcı email girer
+- Kullanıcı şifre girer.
+- Kullanıcı Giriş yap butonuna tıklar.
+
+TEST DATA      
+
+EXPECTED RESULT= kullanıcı başarılı şekilde login olduğu görülür.
+
+
+TEST CASE 5 
+
+TEST SCENARIO Samsung ürünlerinin aranması
+
+TEST Precondition 
+
+Başarılı bir internet bağlantısı
+Geçerli bir mail adresi.
+Geçerli bir şifre
+
+TEST Requirements
+
+TEST STEPS 
+ 
+-	Kullanıcı browser'ı açar
+- Kullanıcı https://www.n11.com/ sayfasını açar
+- Kullanıcı kvkk metnini üzerindeki "Tamam" butonuna tıklar.
+- Kullanıcı "Daha sonra" Butonuna tıklar.
+- Kullanıcı Login olunur.
+- Kullanıcı searchbar üzerinde "Samsung" yazar ve arama butonuna tıklar
+
+TEST DATA      
+
+EXPECTED RESULT= kullanıcı gelen tüm sonuçların samsung içerdiğini görmektedir.
+
+
+TEST CASE 6 
+
+TEST SCENARIO Samsung ürünlerinin aranmasında 2. sayfaya geçiş
+
+TEST Precondition 
+
+Başarılı bir internet bağlantısı
+Geçerli bir mail adresi.
+Geçerli bir şifre
+
+TEST Requirements
+
+TEST STEPS 
+ 
+-	Kullanıcı browser'ı açar
+- Kullanıcı https://www.n11.com/ sayfasını açar
+- Kullanıcı kvkk metnini üzerindeki "Tamam" butonuna tıklar.
+- Kullanıcı "Daha sonra" Butonuna tıklar.
+- Kullanıcı Login olunur.
+- Kullanıcı searchbar üzerinde "Samsung" yazar ve arama butonuna tıklar.
+- Kullanıcı paggination üzerinden 2'ye tıklar.
+
+TEST DATA      
+
+EXPECTED RESULT= kullanıcı arama sonuçlarında 2. sayfaya geçtiğini görür.
+
+TEST CASE 6 
+
+TEST SCENARIO Ürünü favorilere ekleme
+
+TEST Precondition 
+
+Başarılı bir internet bağlantısı
+Geçerli bir mail adresi.
+Geçerli bir şifre
+
+TEST Requirements
+
+TEST STEPS 
+ 
+-	Kullanıcı browser'ı açar
+- Kullanıcı https://www.n11.com/ sayfasını açar
+- Kullanıcı kvkk metnini üzerindeki "Tamam" butonuna tıklar.
+- Kullanıcı "Daha sonra" Butonuna tıklar.
+- Kullanıcı Login olunur.
+- Kullanıcı searchbar üzerinde "Samsung" yazar ve arama butonuna tıklar.
+- Kullanıcı üsten 3. ürününü favorilere ekler.
+- Kullanıcı sağ üst köşeden favorilerim tabına tıklar
+
+
+TEST DATA      
+
+EXPECTED RESULT= kullanıcı ürünün başarılı şekilde favorilere eklendiğini görür.
+
+TEST CASE 7 
+
+TEST SCENARIO Ürünü favorilerden kaldırma
+
+TEST Precondition 
+
+Başarılı bir internet bağlantısı
+Geçerli bir mail adresi.
+Geçerli bir şifre
+
+TEST Requirements
+
+TEST STEPS 
+ 
+-	Kullanıcı browser'ı açar
+- Kullanıcı https://www.n11.com/ sayfasını açar
+- Kullanıcı kvkk metnini üzerindeki "Tamam" butonuna tıklar.
+- Kullanıcı "Daha sonra" Butonuna tıklar.
+- Kullanıcı Login olunur.
+- Kullanıcı searchbar üzerinde "Samsung" yazar ve arama butonuna tıklar.
+- Kullanıcı üsten 3. ürününü favorilere ekler.
+- Kullanıcı sağ üst köşeden favorilerim tabına tıklar.
+- Kullanıcı favorilerden sil butonuna tıklar.
+- Çıkan uyarı ekranına tıklar
+
+
+TEST DATA      
+
+EXPECTED RESULT= kullanıcı ürünün başarılı şekilde favorilerden kalktığını görür.
+
+
+
+
+
+
+
+
+
+
